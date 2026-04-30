@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 540" fill="none" aria-labelledby="visualTitle visualDesc">
+  <title id="visualTitle">三位一体ポジショニング</title>
+  <desc id="visualDesc">現役運送業 × AI×小回り × 中小最適化を掛け合わせた、市場に不在の存在</desc>
+
+  <defs>
+    <radialGradient id="hv-cGlow">
+      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#00d4ff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hv-oHalo">
+      <stop offset="60%" stop-color="#ff6b35" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ff6b35" stop-opacity="0.18"/>
+    </radialGradient>
+    <linearGradient id="hv-grad" x1="0" x2="1">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#ff6b35"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Center glow -->
+  <circle cx="240" cy="265" r="180" fill="url(#hv-cGlow)"/>
+  <!-- Bottom orange halo -->
+  <circle cx="240" cy="335" r="160" fill="url(#hv-oHalo)" opacity="0.5"/>
+
+  <!-- Three pillar circles -->
+  <g stroke-width="1.5">
+    <circle cx="170" cy="230" r="125" stroke="#00d4ff" stroke-opacity="0.55"/>
+    <circle cx="310" cy="230" r="125" stroke="#00d4ff" stroke-opacity="0.55"/>
+    <circle cx="240" cy="335" r="125" stroke="#ff6b35" stroke-opacity="0.7"/>
+  </g>
+
+  <!-- Animated pulse ring at intersection -->
+  <circle cx="240" cy="265" r="20" fill="none" stroke="#00d4ff" stroke-width="1">
+    <animate attributeName="r" values="20;65;20" dur="3.2s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-opacity" values="0.7;0;0.7" dur="3.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="240" cy="265" r="3" fill="#00d4ff">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Connector dashes -->
+  <g stroke="#5a6478" stroke-width="0.8" stroke-dasharray="3,3">
+    <line x1="105" y1="100" x2="125" y2="130"/>
+    <line x1="375" y1="100" x2="355" y2="130"/>
+    <line x1="240" y1="478" x2="240" y2="460"/>
+  </g>
+
+  <!-- Label 1: 現役運送業 (top-left) -->
+  <g>
+    <text x="20" y="60" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="2.4" fill="#00d4ff">[ LOGISTICS ]</text>
+    <text x="20" y="86" font-family="-apple-system, 'Hiragino Sans', sans-serif" font-size="17" font-weight="700" fill="#f0f3f8">現役運送業</text>
+  </g>
+
+  <!-- Label 2: AI×小回り (top-right) -->
+  <g>
+    <text x="460" y="60" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="2.4" fill="#00d4ff">[ AI &amp; AGILE ]</text>
+    <text x="460" y="86" text-anchor="end" font-family="-apple-system, 'Hiragino Sans', sans-serif" font-size="17" font-weight="700" fill="#f0f3f8">AI×小回り体制</text>
+  </g>
+
+  <!-- Label 3: 中小最適化 (bottom) -->
+  <g>
+    <text x="240" y="500" text-anchor="middle" font-family="-apple-system, 'Hiragino Sans', sans-serif" font-size="17" font-weight="700" fill="#f0f3f8">中小最適化</text>
+    <text x="240" y="522" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="2.4" fill="#ff6b35">[ SME-FIT ]</text>
+  </g>
+
+  <!-- Center conclusion: 不在の存在 -->
+  <g>
+    <text x="240" y="272" text-anchor="middle" font-family="-apple-system, 'Hiragino Sans', sans-serif" font-size="34" font-weight="800" fill="url(#hv-grad)" letter-spacing="-1">不在の存在</text>
+    <text x="240" y="296" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="3" fill="#98a4b6">— ABSENT PRESENCE —</text>
+  </g>
+</svg>
