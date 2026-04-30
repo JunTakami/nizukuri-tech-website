@@ -1,57 +1,54 @@
-# AI生成画像 必要リスト
+# 画像アセット
 
-サイト初版に追加で必要な画像をまとめます。生成は別途（ChatGPT 画像生成、Midjourney、Adobe Firefly等）。
+サイトで使用する画像。AI生成ラスター画像の代わりに、テクノ・ミニマルのサイトデザインに合わせて**手書きSVG**で揃えています（2026-04-30）。
 
-## 必須
+## 配置済みアセット
 
-### 1. ヒーローセクションの背景／装飾画像
-- ファイル名候補: `hero-bg.png` / `hero-illust.png`
-- 用途: トップヒーローの背景または右側装飾
-- 推奨サイズ: 1600×900 px（16:9、必要に応じて切り抜き）
-- 想定トーン: 浜松の港・運送・テクノロジーをモチーフ。落ち着いた青〜オレンジのグラデーション。写実的すぎず、抽象寄り
-- プロンプト例: "minimalist abstract illustration of a logistics truck silhouette merging with a network of digital lines, sunset colors over a Japanese coastal town, calm and trustworthy mood"
+### ロゴ・ファビコン
 
-### 2. ロゴ
-- ファイル名: `logo.svg`（推奨）または `logo.png`
-- 用途: ヘッダー左上（現状はテキストブランド）
-- 推奨サイズ: SVGならスケーラブル、PNGなら 200×60 px 程度
-- 想定トーン: シンプル、モノクロまたは2色、漢字「荷造テック」または「Nizukuri Tech」
+| ファイル | 用途 | 備考 |
+|---|---|---|
+| `logo.svg` | （参考用 単体ファイル） | サイト本体ではヘッダー内にインラインSVGとして埋め込み |
+| `favicon.svg` | ブラウザタブ | `<link rel="icon" href="images/favicon.svg" type="image/svg+xml">` で参照 |
 
-### 3. OGP用シェア画像
-- ファイル名: `og-image.png`
-- 用途: SNSシェア時のサムネイル（Facebook/X/LINE等）
-- 必須サイズ: 1200×630 px
-- 内容: ロゴ + キャッチコピー「現役運送業 × AI × 中小最適化」
+### サービスアイコン
 
-### 4. favicon
-- ファイル名: `favicon.ico` または `favicon.svg`
-- 用途: ブラウザタブのアイコン
-- サイズ: 32×32 px / 48×48 px
+| ファイル | 紐づくサービス |
+|---|---|
+| `icons/consult.svg` | SVC.001 IT相談（吹き出し+三点） |
+| `icons/tenko.svg` | SVC.002 自動点呼の運用支援（円+チェック） |
+| `icons/haisha.svg` | SVC.003 配車・出勤管理（トラック） |
+| `icons/security.svg` | SVC.004 セキュリティチェック対応（盾+チェック） |
+| `icons/dev.svg` | SVC.005 個別開発・運用支援（コードブラケット） |
 
-## あると望ましい
+サービスアイコンも本体にはインラインSVGとして埋め込んでいます。`stroke="currentColor"` を使っているのでCSS側で `color: var(--cyan)` を当てて発色を制御しています。
 
-### 5. 各サービスカードのアイコン（5枚）
-- ファイル名: `icon-consult.svg`, `icon-tenko.svg`, `icon-haisha.svg`, `icon-security.svg`, `icon-dev.svg`
-- 用途: サービス章の各カード見出し横
-- サイズ: 48×48 px 程度
-- 想定トーン: 線画アイコン、グレー〜ネイビー単色
+### OGP画像
 
-### 6. 事例カードのスクリーンショット風画像（3枚）
-- ファイル名: `case-shukkin.png`, `case-tenko.png`, `case-security.png`
-- 用途: 事例章の各カード上部
-- サイズ: 800×450 px (16:9)
-- 想定トーン: ダッシュボードのモックアップ、運送業らしいデータが入った画面
+`og-image.svg` (1200×630) — SNSシェア時のサムネイル用。
 
-## 配置後の HTML 修正
+**⚠️ PNG変換が必要**: 多くのSNS（X、Facebook、LINE等）はOGP画像にSVGを受け付けません。本公開時に以下のいずれかの方法で `og-image.png` を作成してください:
 
-画像を配置したら、`index.html` の以下を修正:
+1. **オンライン変換**: https://cloudconvert.com/svg-to-png （1200×630で出力）
+2. **ブラウザ**: SVGをChromeで開いて DevTools → Capture full size screenshot
+3. **Inkscape/Affinity Designer等のローカルツール**
 
-- ヒーローに `<img src="images/hero-illust.png" alt="">` を追加するか、CSSで `.hero { background-image: url(images/hero-bg.png); }` を設定
-- ヘッダーの `.brand` をテキストからロゴ画像に差し替え
-- `<head>` に `<link rel="icon" href="images/favicon.svg">` を追加
-- `<head>` の `<meta property="og:image">` を追加し `images/og-image.png` を指定
+`index.html` の OGP メタタグは既に `images/og-image.png` を参照する形にしてあるので、PNG化したファイルを置けば自動的に反映されます。
 
-## 著作権・利用注意
+## ロゴデザインの意図
 
-- AI生成画像は商用利用可能なツール／ライセンスを使用すること
-- 親会社（日本荷造運送）のロゴ・建物写真などを流用する場合は必ず親会社に確認
+- **外枠の正方形** — 「荷造（パッケージ）」を象徴
+- **内側の三本線** — 「三位一体（現役運送業 × AI × 中小最適化）」と日本語の「三」
+- **下段だけシアン** — 一番下が「AI×小回り体制」軸であり、テック寄りである象徴
+- **モノラインのfeather風** — 親会社（運送業）の信頼感とテックの先進性のバランス
+
+## ラスター画像（写真・イラスト）の追加について
+
+写実的な画像（浜松の風景、トラック写真、スタッフ写真など）を後追いで足したい場合:
+
+1. AI画像生成ツール（ChatGPT、Midjourney、Adobe Firefly等）でPNG/JPGを生成
+2. このディレクトリに配置（例: `hero-bg.png`, `staff.jpg`）
+3. `index.html` および `style.css` に `<img>` タグまたは `background-image` で組み込み
+4. 商用利用可能なライセンスを必ず確認
+
+ただし現状のテクノ・ミニマル設計は**写真を入れない方が一貫性が保てる**ため、写真追加は慎重に検討してください。

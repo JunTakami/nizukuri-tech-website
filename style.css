@@ -113,12 +113,21 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .brand:hover { color: var(--text); }
 
-.brand-mark {
-  font-family: var(--font-mono);
-  font-size: 18px;
-  color: var(--cyan);
-  font-weight: 700;
-  letter-spacing: 0.05em;
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  color: var(--text);
+  flex-shrink: 0;
+  margin-right: 4px;
+  align-self: center;
+}
+.brand-logo svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .brand-name {
@@ -503,13 +512,31 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .service-card:hover::before { transform: scaleX(1); }
 
+.service-icon {
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin: 0 0 18px;
+  color: var(--cyan);
+  filter: drop-shadow(0 0 8px var(--cyan-glow));
+  transition: transform 0.3s ease;
+}
+.service-icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.service-card:hover .service-icon {
+  transform: scale(1.08) rotate(-3deg);
+}
+
 .service-card .marker {
   display: block;
   font-family: var(--font-mono);
   font-size: 11px;
-  color: var(--cyan);
+  color: var(--text-muted);
   letter-spacing: 0.14em;
-  margin: 0 0 18px;
+  margin: 0 0 14px;
 }
 
 .service-card h3 {
