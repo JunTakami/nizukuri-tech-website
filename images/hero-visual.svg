@@ -8,10 +8,6 @@
       <stop offset="50%" stop-color="#00d4ff" stop-opacity="0.05"/>
       <stop offset="100%" stop-color="#00d4ff" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="hv-oHalo">
-      <stop offset="60%" stop-color="#ff6b35" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#ff6b35" stop-opacity="0.18"/>
-    </radialGradient>
     <linearGradient id="hv-grad" x1="0" x2="1">
       <stop offset="0%" stop-color="#00d4ff"/>
       <stop offset="100%" stop-color="#ff6b35"/>
@@ -20,14 +16,12 @@
 
   <!-- Center glow -->
   <circle cx="240" cy="265" r="180" fill="url(#hv-cGlow)"/>
-  <!-- Bottom orange halo -->
-  <circle cx="240" cy="335" r="160" fill="url(#hv-oHalo)" opacity="0.5"/>
 
-  <!-- Three pillar circles -->
+  <!-- Three pillar circles (all unified to cyan, equal weight) -->
   <g stroke-width="1.5">
     <circle cx="170" cy="230" r="125" stroke="#00d4ff" stroke-opacity="0.55"/>
     <circle cx="310" cy="230" r="125" stroke="#00d4ff" stroke-opacity="0.55"/>
-    <circle cx="240" cy="335" r="125" stroke="#ff6b35" stroke-opacity="0.7"/>
+    <circle cx="240" cy="335" r="125" stroke="#00d4ff" stroke-opacity="0.55"/>
   </g>
 
   <!-- Animated pulse ring at intersection -->
@@ -61,7 +55,7 @@
   <!-- Label 3: 中小最適化 (bottom) -->
   <g>
     <text x="240" y="500" text-anchor="middle" font-family="-apple-system, 'Hiragino Sans', sans-serif" font-size="17" font-weight="700" fill="#f0f3f8">中小最適化</text>
-    <text x="240" y="522" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="2.4" fill="#ff6b35">[ SME-FIT ]</text>
+    <text x="240" y="522" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="2.4" fill="#00d4ff">[ SME-FIT ]</text>
   </g>
 
   <!-- Center conclusion: 不在の存在 -->
