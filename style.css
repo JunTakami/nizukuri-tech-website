@@ -1031,7 +1031,7 @@ img { max-width: 100%; height: auto; display: block; }
   background: var(--cyan);
   margin-left: 8px;
   vertical-align: -0.15em;
-  animation: cursorBlink 1.05s steps(2) infinite;
+  animation: cursorBlink 1.06s steps(2) infinite;
 }
 
 /* ============================================================
