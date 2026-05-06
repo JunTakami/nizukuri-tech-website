@@ -33,8 +33,8 @@
     <line x1="14" y1="28" x2="36" y2="28" stroke="#f0f3f8" stroke-width="3.4" stroke-linecap="round"/>
     <line x1="14" y1="38" x2="42" y2="38" stroke="#00d4ff" stroke-width="3.4" stroke-linecap="round"/>
   </g>
-  <text x="966" y="84" font-size="24" font-weight="700" fill="#f0f3f8">株式会社荷造テック</text>
-  <text x="966" y="112" font-family="'JetBrains Mono', 'Cascadia Code', 'Consolas', monospace" font-size="14" letter-spacing="3" fill="#98a4b6">NIZUKURI TECH</text>
+  <text x="966" y="84" font-size="22" font-weight="700" fill="#f0f3f8">日本荷造運送 IT支援サービス</text>
+  <text x="966" y="112" font-family="'JetBrains Mono', 'Cascadia Code', 'Consolas', monospace" font-size="13" letter-spacing="3" fill="#98a4b6">NIPPON NIZUKURI / IT</text>
 
   <!-- Main copy -->
   <g transform="translate(80, 240)">
