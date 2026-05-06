@@ -430,8 +430,10 @@ img { max-width: 100%; height: auto; display: block; }
 .section-eyebrow .bar {
   flex: 0 0 60px;
   height: 1px;
-  background: var(--cyan);
-  opacity: 0.5;
+  background: linear-gradient(90deg, transparent 0%, var(--cyan) 50%, transparent 100%);
+  background-size: 220% 100%;
+  background-repeat: no-repeat;
+  animation: barSweep 3.6s ease-in-out infinite;
 }
 .section-eyebrow .label {
   color: var(--text-muted);
@@ -554,6 +556,7 @@ img { max-width: 100%; height: auto; display: block; }
   color: var(--cyan);
   filter: drop-shadow(0 0 8px var(--cyan-glow));
   transition: transform 0.3s ease;
+  position: relative;
 }
 .service-icon svg {
   width: 100%;
@@ -655,11 +658,13 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: 56px;
   font-weight: 700;
   line-height: 1;
-  background: linear-gradient(135deg, var(--cyan) 0%, var(--orange) 100%);
+  background: linear-gradient(120deg, #00d4ff 0%, #ff6b35 50%, #00d4ff 100%);
+  background-size: 220% 220%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   letter-spacing: -0.02em;
+  animation: numShine 5.4s linear infinite;
 }
 
 .why-card h3 {
@@ -695,8 +700,10 @@ img { max-width: 100%; height: auto; display: block; }
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--cyan-soft) 0%, transparent 50%, var(--orange-soft) 100%);
+  background: linear-gradient(135deg, var(--cyan-soft) 0%, transparent 40%, transparent 60%, var(--orange-soft) 100%);
+  background-size: 220% 220%;
   pointer-events: none;
+  animation: conclusionFlow 8s ease-in-out infinite alternate;
 }
 .why-conclusion strong {
   display: inline-block;
@@ -736,6 +743,8 @@ img { max-width: 100%; height: auto; display: block; }
   background: var(--bg);
   transition: background 0.2s ease;
   align-items: start;
+  position: relative;
+  overflow: hidden;
 }
 .case-card:hover { background: var(--bg-elev); }
 
@@ -874,6 +883,7 @@ img { max-width: 100%; height: auto; display: block; }
     radial-gradient(ellipse at 50% 100%, var(--cyan-glow) 0%, transparent 60%);
   pointer-events: none;
   z-index: 0;
+  animation: contactBreath 6s ease-in-out infinite alternate;
 }
 .section-contact > .container { position: relative; z-index: 1; }
 .section-contact .section-eyebrow { justify-content: center; }
@@ -955,4 +965,126 @@ img { max-width: 100%; height: auto; display: block; }
 
 @media (max-width: 600px) {
   .footer-inner { flex-direction: column; align-items: flex-start; }
+}
+
+/* ============================================================
+   SECTION ANIMATIONS — bring subtle motion to every section
+   ============================================================ */
+
+/* CHALLENGES: pulsing cyan dot after each marker [01]/[02]/[03]/[04] */
+.challenge-card .marker::after {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 8px var(--cyan);
+  margin-left: 10px;
+  vertical-align: middle;
+  animation: dotPulse 2.4s ease-in-out infinite;
+}
+.challenge-card:nth-child(2) .marker::after { animation-delay: 0.3s; }
+.challenge-card:nth-child(3) .marker::after { animation-delay: 0.6s; }
+.challenge-card:nth-child(4) .marker::after { animation-delay: 0.9s; }
+
+/* SERVICES: breathing radial glow behind each icon */
+.service-icon::after {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  background: radial-gradient(circle, var(--cyan-glow) 0%, transparent 70%);
+  opacity: 0.3;
+  animation: iconBreath 3s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: -1;
+}
+.service-card:nth-child(2) .service-icon::after { animation-delay: -0.5s; }
+.service-card:nth-child(3) .service-icon::after { animation-delay: -1s; }
+.service-card:nth-child(4) .service-icon::after { animation-delay: -1.5s; }
+
+/* WHY US: stagger the gradient shimmer across 01/02/03 */
+.why-card:nth-child(2) .why-num { animation-delay: -1.8s; }
+.why-card:nth-child(3) .why-num { animation-delay: -3.6s; }
+
+/* CASES: scanning data line at bottom of each case card */
+.case-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -30%;
+  height: 1px;
+  width: 30%;
+  background: linear-gradient(90deg, transparent 0%, var(--cyan) 50%, transparent 100%);
+  animation: caseLine 4.2s linear infinite;
+  pointer-events: none;
+}
+.case-list .case-card:nth-child(2)::after { animation-delay: 1.4s; }
+.case-list .case-card:nth-child(3)::after { animation-delay: 2.8s; }
+
+/* MESSAGE: blinking terminal cursor at end of signature */
+.message-signature::after {
+  content: "";
+  display: inline-block;
+  width: 0.55em;
+  height: 0.95em;
+  background: var(--cyan);
+  margin-left: 8px;
+  vertical-align: -0.15em;
+  animation: cursorBlink 1.05s steps(2) infinite;
+}
+
+/* ============================================================
+   KEYFRAMES
+   ============================================================ */
+
+@keyframes barSweep {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -120% 0; }
+}
+
+@keyframes dotPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.25; transform: scale(0.6); }
+}
+
+@keyframes iconBreath {
+  0%   { opacity: 0.15; transform: scale(0.85); }
+  100% { opacity: 0.6;  transform: scale(1.2); }
+}
+
+@keyframes numShine {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+@keyframes conclusionFlow {
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+@keyframes caseLine {
+  0%   { left: -30%; }
+  100% { left: 100%; }
+}
+
+@keyframes cursorBlink {
+  50% { opacity: 0; }
+}
+
+@keyframes contactBreath {
+  0%   { opacity: 1;    transform: scale(1); }
+  100% { opacity: 0.55; transform: scale(1.18); }
+}
+
+/* ============================================================
+   ACCESSIBILITY: respect reduced-motion preference
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
