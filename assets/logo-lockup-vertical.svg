@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" fill="none" shape-rendering="geometricPrecision" aria-label="株式会社荷造テック ロックアップ 縦組み">
+  <g transform="translate(120 10)">
+    <g stroke="currentColor" stroke-width="6" fill="none">
+      <path d="M 48 22 L 22 22 L 22 48"></path>
+      <path d="M 152 22 L 178 22 L 178 48"></path>
+      <path d="M 22 152 L 22 178 L 48 178"></path>
+      <path d="M 178 152 L 178 178 L 152 178"></path>
+    </g>
+    <g fill="currentColor">
+      <rect x="50" y="50" width="24" height="100"></rect>
+      <rect x="126" y="50" width="24" height="100"></rect>
+    </g>
+    <polygon points="50,50 74,50 150,150 126,150" fill="#00d4ff"></polygon>
+  </g>
+  <g fill="currentColor" font-family="M PLUS 1, sans-serif" font-weight="800" text-anchor="middle">
+    <text x="200" y="270" font-size="36" letter-spacing="1">株式会社荷造テック</text>
+  </g>
+  <g fill="currentColor" opacity="0.6" font-family="IBM Plex Mono, monospace" font-weight="500" text-anchor="middle">
+    <text x="200" y="308" font-size="14" letter-spacing="5">NIZUKURI TECH</text>
+  </g>
+</svg>

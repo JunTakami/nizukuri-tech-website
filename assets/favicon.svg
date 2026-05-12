@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" shape-rendering="geometricPrecision">
+  <rect width="200" height="200" rx="32" fill="#0a0e1a"></rect>
+  <g stroke="#f0f3f8" stroke-width="8" fill="none">
+    <path d="M 56 30 L 30 30 L 30 56"></path>
+    <path d="M 144 30 L 170 30 L 170 56"></path>
+    <path d="M 30 144 L 30 170 L 56 170"></path>
+    <path d="M 170 144 L 170 170 L 144 170"></path>
+  </g>
+  <g fill="#f0f3f8">
+    <rect x="54" y="54" width="26" height="92"></rect>
+    <rect x="120" y="54" width="26" height="92"></rect>
+  </g>
+  <polygon points="54,54 80,54 146,146 120,146" fill="#00d4ff"></polygon>
+</svg>

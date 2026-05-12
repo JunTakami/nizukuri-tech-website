@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" shape-rendering="geometricPrecision">
+  <defs>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#232a3f" stroke-width="1"></path>
+    </pattern>
+    <radialGradient id="vignette" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#0a0e1a" stop-opacity="0"></stop>
+      <stop offset="100%" stop-color="#0a0e1a" stop-opacity="1"></stop>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0a0e1a"></rect>
+  <rect width="1200" height="630" fill="url(#grid)"></rect>
+  <rect width="1200" height="630" fill="url(#vignette)"></rect>
+
+  
+  <g transform="translate(96 175) scale(1.4)">
+    <g stroke="#f0f3f8" stroke-width="6" fill="none">
+      <path d="M 48 22 L 22 22 L 22 48"></path>
+      <path d="M 152 22 L 178 22 L 178 48"></path>
+      <path d="M 22 152 L 22 178 L 48 178"></path>
+      <path d="M 178 152 L 178 178 L 152 178"></path>
+    </g>
+    <g fill="#f0f3f8">
+      <rect x="50" y="50" width="24" height="100"></rect>
+      <rect x="126" y="50" width="24" height="100"></rect>
+    </g>
+    <polygon points="50,50 74,50 150,150 126,150" fill="#00d4ff"></polygon>
+  </g>
+
+  
+  <g font-family="IBM Plex Mono, monospace" font-weight="500" font-size="20" letter-spacing="5">
+    <text x="450" y="225" fill="#00d4ff">NIZUKURI TECH · HAMAMATSU 2026</text>
+  </g>
+
+  
+  <g font-family="M PLUS 1, sans-serif" font-weight="800" fill="#f0f3f8">
+    <text x="448" y="320" font-size="76" letter-spacing="2">株式会社荷造テック</text>
+  </g>
+
+  
+  <g font-family="M PLUS 1, sans-serif" font-weight="500" fill="#98a4b6">
+    <text x="450" y="385" font-size="30" letter-spacing="2">浜松の運送業に届く、AIと小回りのIT支援。</text>
+  </g>
+
+  
+  <line x1="96" y1="540" x2="1104" y2="540" stroke="#232a3f" stroke-width="1"></line>
+  <g font-family="IBM Plex Mono, monospace" font-weight="500" font-size="18" letter-spacing="3" fill="#5a6478">
+    <text x="96" y="580">PHASE 1 · 日本荷造運送 IT支援サービス</text>
+    <text x="1104" y="580" text-anchor="end">nizukuri-tech.com</text>
+  </g>
+</svg>

@@ -17,8 +17,8 @@
   --orange-soft: rgba(255, 107, 53, 0.14);
 
   /* === Typography === */
-  --font-jp: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", "Yu Gothic", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", "Roboto Mono", "Cascadia Code", "Consolas", "Menlo", "Courier New", monospace;
+  --font-jp: "M PLUS 1", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", "Yu Gothic", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", "JetBrains Mono", "SFMono-Regular", "Consolas", "Menlo", monospace;
 
   /* === Layout === */
   --max-width: 1200px;
@@ -117,8 +117,8 @@ img { max-width: 100%; height: auto; display: block; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   color: var(--text);
   flex-shrink: 0;
   margin-right: 4px;
@@ -550,8 +550,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 .service-icon {
   display: block;
-  width: 36px;
-  height: 36px;
+  width: 56px;
+  height: 56px;
   margin: 0 0 18px;
   color: var(--cyan);
   filter: drop-shadow(0 0 8px var(--cyan-glow));

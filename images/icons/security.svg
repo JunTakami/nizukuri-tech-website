@@ -1,4 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-label="セキュリティチェック対応">
-  <path d="M12 2 l8 4 v6 c0 5-3.5 9-8 10 c-4.5-1-8-5-8-10 V6 z"/>
-  <path d="M9 12 l2 2 l4-4"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" shape-rendering="geometricPrecision" aria-label="セキュリティチェック対応">
+  <g stroke="currentColor" stroke-width="6" fill="none">
+    <path d="M 48 22 L 22 22 L 22 48"/>
+    <path d="M 152 22 L 178 22 L 178 48"/>
+    <path d="M 22 152 L 22 178 L 48 178"/>
+    <path d="M 178 152 L 178 178 L 152 178"/>
+    <path d="M 100 52 L 148 72 L 148 116 L 100 148 L 52 116 L 52 72 Z"/>
+  </g>
+  <polygon points="76,116 84,124 128,76 120,68" fill="#00d4ff"/>
 </svg>

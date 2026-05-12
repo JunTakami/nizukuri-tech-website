@@ -1,6 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-label="IT相談">
-  <path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-  <circle cx="9" cy="11" r="0.6" fill="currentColor"/>
-  <circle cx="12" cy="11" r="0.6" fill="currentColor"/>
-  <circle cx="15" cy="11" r="0.6" fill="currentColor"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" shape-rendering="geometricPrecision" aria-label="IT相談">
+  <g stroke="currentColor" stroke-width="6" fill="none">
+    <path d="M 48 22 L 22 22 L 22 48"/>
+    <path d="M 152 22 L 178 22 L 178 48"/>
+    <path d="M 22 152 L 22 178 L 48 178"/>
+    <path d="M 178 152 L 178 178 L 152 178"/>
+    <rect x="48" y="56" width="104" height="64"/>
+  </g>
+  <g fill="currentColor">
+    <rect x="72" y="84" width="8" height="8"/>
+    <rect x="96" y="84" width="8" height="8"/>
+    <rect x="120" y="84" width="8" height="8"/>
+  </g>
+  <polygon points="56,120 88,120 56,152" fill="#00d4ff"/>
 </svg>

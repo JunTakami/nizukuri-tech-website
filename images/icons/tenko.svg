@@ -1,4 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-label="自動点呼">
-  <circle cx="12" cy="12" r="9"/>
-  <path d="M8 12.5 l3 3 l5-6"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" shape-rendering="geometricPrecision" aria-label="自動点呼">
+  <g stroke="currentColor" stroke-width="6" fill="none">
+    <path d="M 48 22 L 22 22 L 22 48"/>
+    <path d="M 152 22 L 178 22 L 178 48"/>
+    <path d="M 22 152 L 22 178 L 48 178"/>
+    <path d="M 178 152 L 178 178 L 152 178"/>
+    <circle cx="100" cy="100" r="52"/>
+    <path d="M 60 104 L 84 128"/>
+  </g>
+  <polygon points="80,124 88,132 144,76 136,68" fill="#00d4ff"/>
 </svg>

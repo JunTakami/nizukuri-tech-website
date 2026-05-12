@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none" shape-rendering="geometricPrecision" aria-label="株式会社荷造テック ロゴ モノクロ黒">
+  <g stroke="#0a0e1a" stroke-width="6" fill="none">
+    <path d="M 48 22 L 22 22 L 22 48"></path>
+    <path d="M 152 22 L 178 22 L 178 48"></path>
+    <path d="M 22 152 L 22 178 L 48 178"></path>
+    <path d="M 178 152 L 178 178 L 152 178"></path>
+  </g>
+  <g fill="#0a0e1a">
+    <rect x="50" y="50" width="24" height="100"></rect>
+    <rect x="126" y="50" width="24" height="100"></rect>
+    <polygon points="50,50 74,50 150,150 126,150"></polygon>
+  </g>
+</svg>
